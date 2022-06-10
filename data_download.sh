@@ -6,10 +6,9 @@
 ####
 
 # srr_acc is location of SRR.Acc.txt file
-srr_acc=$1
+srr_acc=srr_acc.txt
 
 # for checking space
-touch temp_space.txt
 temp=0
 while read -r line
   do
