@@ -9,5 +9,5 @@ array=$(echo $snames | tr "," "\n")
 arr=($array)
 
 if [ "$?" -eq "0" ]; then
-  data_download.sh $arr
+  $PWD/data_download.sh $arr
 fi
