@@ -11,11 +11,11 @@ echo $snames | tr "," "\n" >srr_acc.txt
 
 which vdb-config >/dev/null 2>&1
 if [[ $? -ne 0 ]]; then
-mkdir -p /opt/application
-cd /opt/application
-wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.1/sratoolkit.2.4.1-ubuntu64.tar.gz
-tar xzvf sratoolkit.2.4.1-ubuntu64.tar.gz
-export PATH=$PATH:/opt/application/sratoolkit.2.4.1-ubuntu64/bin
+  mkdir -p ~/application
+  cd ~/application
+  wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.1/sratoolkit.2.4.1-ubuntu64.tar.gz
+  tar xzvf sratoolkit.2.4.1-ubuntu64.tar.gz
+  export PATH=$PATH:~/application/sratoolkit.2.4.1-ubuntu64/bin
 fi
 
 if [ "$?" -eq "0" ]; then
