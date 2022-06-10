@@ -6,10 +6,7 @@
 ####
 
 # srr_acc is location of SRR.Acc.txt file
-srr_acc=/location/of/the/SRR_Acc.txt/file
-
-# out_dir=location of output directory
-out_dir=/home/chaos/15_nov/samples
+srr_acc=$1
 
 # for checking space
 touch temp_space.txt
@@ -49,5 +46,5 @@ while read -r line; do
                         ls ${line}*
                         if [ $? -ne 0 ]
                             then
-                              fasterq-dump -p $line -O ${out_dir}
+                              fasterq-dump -p $line -O .
                         done < ${srr_acc}
