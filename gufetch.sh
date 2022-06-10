@@ -8,5 +8,5 @@ snames=$(echo $description | cut -d'|' -f1)
 echo $snames | tr "," "\n" >srr_acc.txt
 
 if [ "$?" -eq "0" ]; then
-  bash $PWD/data_download.sh $arr
+  bash $PWD/data_download.sh 
 fi
