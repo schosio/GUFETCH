@@ -47,4 +47,5 @@ while read -r line; do
                         if [ $? -ne 0 ]
                             then
                               fasterq-dump -p $line -O .
+                        fi
                         done < ${srr_acc}
