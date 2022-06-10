@@ -5,8 +5,7 @@ description=$(zenity --forms --title="Download of the SRA files" --text="Give SR
 [[ $? != 0 ]] && exit 1
 snames=$(echo $description | cut -d'|' -f1)
 
-array=$(echo $snames | tr "," "\n")
-arr=($array)
+echo $snames | tr "," "\n" >srr_acc.txt
 
 if [ "$?" -eq "0" ]; then
   bash $PWD/data_download.sh $arr
