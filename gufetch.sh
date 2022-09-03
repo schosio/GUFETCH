@@ -19,7 +19,7 @@ which vdb-config >/dev/null 2>&1
 if [[ $? -ne 0 ]]; then
   mkdir -p $HOME/application
   cd ~/application
-  wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.1/sratoolkit.2.4.1-ubuntu64.tar.gz
+  wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.11.2/sratoolkit.2.11.2-ubuntu64.tar.gz
   tar xzvf sratoolkit.2.4.1-ubuntu64.tar.gz
   export PATH="$HOME/application/sratoolkit.2.4.1-ubuntu64/bin:$PATH"
   cd -
