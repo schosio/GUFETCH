@@ -9,7 +9,7 @@ echo $snames | tr "," "\n" >SRR_Acc_List.txt
 
 # select the Acc file
 
-SRR=$(zenity --file-selection --filename $HOME/C_files/genome/human/hg38/annotation/gencode.v40.chr_patch_hapl_scaff.annotation.gtf \
+SRR=$(zenity --file-selection --filename  \
 --title="***SRR Accession List file***"  --text="Select SRR Accession List file")
 [[ $? != 0 ]] && exit 1
 
@@ -22,6 +22,7 @@ if [[ $? -ne 0 ]]; then
   wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.4.1/sratoolkit.2.4.1-ubuntu64.tar.gz
   tar xzvf sratoolkit.2.4.1-ubuntu64.tar.gz
   export PATH=$PATH:~/application/sratoolkit.2.4.1-ubuntu64/bin
+  cd -
 fi
 
 if [ "$?" -eq "0" ]; then
