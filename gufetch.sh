@@ -5,7 +5,13 @@ description=$(zenity --forms --title="Download of the SRA files" --text="Give SR
 [[ $? != 0 ]] && exit 1
 snames=$(echo $description | cut -d'|' -f1)
 
-echo $snames | tr "," "\n" >srr_acc.txt
+echo $snames | tr "," "\n" >SRR_Acc_List.txt
+
+# select the Acc file
+
+GTF=$(zenity --file-selection --filename $HOME/C_files/genome/human/hg38/annotation/gencode.v40.chr_patch_hapl_scaff.annotation.gtf \
+--title="***SRR Accession List file***"  --text="Select SRR Accession List file")
+[[ $? != 0 ]] && exit 1
 
 # check wheather SRA toolkit is installed or not
 
