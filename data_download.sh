@@ -1,12 +1,18 @@
 #!/bin/bash
 #####################################################################
-#  SRR_Acc.txt file contains SRR identfiers of the respecive SRA files in following format: separated by newline
+#  SRR_Acc_List.txt file contains SRR identfiers of the respecive SRA files in following format: separated by newline
 # SRR5370445
 # SRR5370445
-####
+#####################################################################
+#  To download the accession list, use the following steps.
 
-# srr_acc is location of SRR.Acc.txt file
-srr_acc=srr_acc.txt
+# 1. Go to the bioproject page in GEO database from NCBI
+# 2. Move to SRA run selector  at the bottom of the page
+# 3. Click on the Accession List
+# 4. Voila, the Accession list is downloaded: SRR_Acc_List.txt
+
+# srr_acc is location of SRR_Acc_List.txt file
+srr_acc=SRR_Acc_List.txt
 
 # for checking space
 temp=0
